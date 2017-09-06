@@ -9,7 +9,7 @@ if [ -z "$SSH_PRIVATE_KEY" ]; then
 fi
 
 eval $(ssh-agent -s)
-ssh-add <(echo "$SSH_PRIVATE_KEY")
+ssh-add <(echo "$SSH_PRIVATE_KEY")  >/dev/null 2>&1
 unset SSH_PRIVATE_KEY
 
 exec "$@"
