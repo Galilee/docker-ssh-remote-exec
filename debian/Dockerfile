@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 LABEL maintainer="Stéphane BARON <sbaron@galilee.fr>"
 
 RUN apt-get update --yes \
